@@ -122,6 +122,8 @@ ubuntu@ip-172-31-23-204:~$ ansible-playbook -i inventory install-java.yml
 
 **Output**:
 
+<img width="2000" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture4.png ">
+
 
 
 
