@@ -6,7 +6,7 @@ The task is to create three Ubuntu Servers and provide password-less authenticat
 
 **Step 1:** Log in to the AWS account and Create 3 EC2 instances with Ubuntu operating system.
 
-<img width="1187" alt="Screenshot 2023-02-01 at 12 42 01 PM" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture1.png ">
+<img width="1187" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture1.png ">
 
 
 **Step 2:**  Connect to the EC2 instances using SSH Client.
