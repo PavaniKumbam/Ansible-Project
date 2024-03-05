@@ -124,6 +124,18 @@ ubuntu@ip-172-31-23-204:~$ ansible-playbook -i inventory install-java.yml
 
 <img width="2000" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture4.png ">
 
+You can check in the Target-Servers if the java is installed or not. To check, run the below command on both the Target-Servers:
+```
+ubuntu@ip-172-31-19-158:~$ java --version
+```
+
+**Output**:
+
+
+<img width="1700" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture5.png ">
+
+<img width="1700" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture6.png ">
+
 
 
 
