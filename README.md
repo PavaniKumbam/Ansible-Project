@@ -38,6 +38,7 @@ ubuntu@ip-172-31-23-204:~$ cat /home/ubuntu/.ssh/id_rsa.pub
 The above command will provide the public key.
 
 Copy the generated ssh key and paste it to the host nodes which we need to connect from the master. Once the public key is copied to the host machines need to check on the connectivity. 
+
 **Step 7:** Do the below command on both the host nodes to check what files have been created in the ssh folder.
 
 ```
@@ -46,26 +47,36 @@ ubuntu@ip-172-31-20-200:~$ ls ~/.ssh/   # perform command on host node2
 ```
 We can see that the authorized_keys, id_rsa and id_rsa.pub files have been created.
 
-**Step 7:** Now open the authorized_keys file and paste the public key of the first server.
+**Step 8:** Now open the authorized_keys file and paste the public key of the first server.
 ```
 ubuntu@ip-172-31-19-158:~$ vim ~/.ssh/authorized_keys  #host node2
 ubuntu@ip-172-31-20-200:~$ vim ~/.ssh/authorized_keys  #host node2
 ```
 If you already see a key in the **authorized_keys** file, remove it and paste the first server key into this file.
 
-**Step 8:** Let's try to connect to the Any one host server from the first server.
+**Step 9:** Let's try to connect to the Any one host server from the first server.
 ```
 ubuntu@ip-172-31-23-204:~$ ssh 172.31.19.158
 ```
 Connection Successful and authenticated without any password!
 Do logout
 
-**Step 9:** Add the host machine details in Inventory file
+**Step 10:** Add the host machine details in Inventory file
 Create an inventory file and paste the Target-Ubuntu server's private IPv4 address in it.
 
 ```
 ubuntu@ip-172-31-23-204:~$ vim inventory
 ```
+If you want to create a file in the **Target-Ubuntu** servers, run the below command in **Ansible-Server**. The IPv4 address will be picked up from the inventory file.
+
+```
+ubuntu@ip-172-31-23-204:~$ ansible -i inventory all -m “shell” -a “touch ansiblefile”
+```
+**-i inventory**: it's for telling the location of the inventory file, if it's in default etc/hosts/ path then this line is not needed.
+**-m**: module, here shell commands are supported by ansible, hence we provided -m module and shell to take up shell commands
+**-a**: tells what kind of command to be executed “touch/nproc/df” are shell commands
+
+
 
 
 
