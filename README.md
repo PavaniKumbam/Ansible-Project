@@ -78,6 +78,9 @@ ubuntu@ip-172-31-23-204:~$ ansible -i inventory all -m “shell” -a “touch a
 
 **-a**: tells what kind of command to be executed “touch/nproc/df” are shell commands
 
+You can refer to [Ansible modules](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html)
+
+
 ## Write a playbook to install Java:
 
 Create an ansible playbook namely install-java.yml that has tasks to install java.
