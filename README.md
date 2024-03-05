@@ -18,7 +18,7 @@ ubuntu@ip-172-31-23-204:~$ sudo apt update
 
 **Step 4:** Install Ansible
 ```
-ubuntu@ip-172-31-23-204:~$ sudo apt
+ubuntu@ip-172-31-23-204:~$ sudo apt install ansible
 ```
 
 You can verify using the below command:
