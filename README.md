@@ -8,6 +8,7 @@ The task is to create three Ubuntu Servers and provide password-less authenticat
 
 
 **Step 2:**  Connect to the EC2 instances using SSH Client.
+
 **Step 3:** Now, we need to install Ansible. But first, we need to update the packages for whatever distribution is present for the EC2 machine. For Ubuntu, it is apt. To update packages, we need root user privileges, Hence we use sudo. 
 ```
 ubuntu@ip-172-31-23-204:~$ sudo apt update
