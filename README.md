@@ -18,6 +18,23 @@ ubuntu@ip-172-31-23-204:~$ sudo apt update
 ubuntu@ip-172-31-23-204:~$ sudo apt
 ```
 
+You can verify using the below command:
+```
+ubuntu@ip-172-31-23-204:~$ ansible –version
+```
+
+**Step 5:** To set up password-less authentication
+```
+ubuntu@ip-172-31-23-204:~$ ssh-keygen
+```
+For the path of the file and passphrase, just press enter for both.
+By doing this, the public key, private key, and known_hosts files are saved in the path ***— /home/ubuntu/.ssh/***
+
+**Step 6:** The generated SSH key is saved in the below file path which needs to be copied and pasted into the host file authorized_keys as this will be helpful for us to communicate with the server.
+ubuntu@ip-172-31-23-204:~$ cat /home/ubuntu/.ssh/id_rsa.pub
+
+
+
 
  
  
