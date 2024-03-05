@@ -25,7 +25,7 @@ You can verify using the below command:
 ```
 ubuntu@ip-172-31-23-204:~$ ansible –version
 ```
-<img width="1187" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture2.png ">
+<img width="1000" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture2.png ">
 
 **Step 5:** To set up password-less authentication
 ```
