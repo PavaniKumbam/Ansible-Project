@@ -73,8 +73,47 @@ If you want to create a file in the **Target-Ubuntu** servers, run the below com
 ubuntu@ip-172-31-23-204:~$ ansible -i inventory all -m “shell” -a “touch ansiblefile”
 ```
 **-i inventory**: it's for telling the location of the inventory file, if it's in default etc/hosts/ path then this line is not needed.
+
 **-m**: module, here shell commands are supported by ansible, hence we provided -m module and shell to take up shell commands
+
 **-a**: tells what kind of command to be executed “touch/nproc/df” are shell commands
+
+## Write a playbook to install Java:
+
+Create an ansible playbook namely install-java.yml that has tasks to install java.
+
+```
+ubuntu@ip-172-31-23-204:~$ vim install-java.yml
+```
+In install-java.yml, write the tasks to install java.
+
+```
+---
+- hosts: all
+  tasks:
+    - name: Task - 1 Update APT package manager repositories cache
+      become: true
+      apt:
+        update_cache: yes
+    - name: Task -2 Install Java using Ansible
+      become: yes
+      apt:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+           - openjdk-11-jdk
+```
+
+
+To execute the playbook, run the below command:
+
+```
+ubuntu@ip-172-31-23-204:~$ ansible-playbook -i inventory install-java.yml
+```
+
+**Output**:
+
 
 
 
