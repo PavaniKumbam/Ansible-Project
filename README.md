@@ -40,6 +40,8 @@ ubuntu@ip-172-31-23-204:~$ cat /home/ubuntu/.ssh/id_rsa.pub
 ```
 The above command will provide the public key.
 
+<img width="1187" src="https://github.com/PavaniKumbam/Ansible-Project/blob/main/Picture3.png ">
+
 Copy the generated ssh key and paste it to the host nodes which we need to connect from the master. Once the public key is copied to the host machines need to check on the connectivity. 
 
 **Step 7:** Do the below command on both the host nodes to check what files have been created in the ssh folder.
