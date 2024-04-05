@@ -61,7 +61,7 @@ ubuntu@ip-172-31-19-158:~$ vim ~/.ssh/authorized_keys
 ``` 
 If you already see a key in the authorized_keys file, remove it and paste the first server key into this file.
 
-**Step 9**: Let's try to connect to the Any one host server from the first server.
+**Step 9**: Let's try to connect to the host(second) server from the first server.
 
 ```
 ubuntu@ip-172-31-23-204:~$ ssh 172.31.19.158
