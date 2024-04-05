@@ -110,7 +110,7 @@ Install Jenkins
 
 ```
 ---
- - hosts: My_Group
+ - hosts: My_Group   ### Replace this with your host
 
    tasks:
     - name: ensure the jenkins apt repository key is installed
