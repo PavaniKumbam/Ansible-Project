@@ -32,18 +32,18 @@ aws-infra-role/
 - Connect to the EC2 instances using SSH Client.
 - Install Ansible, Execute the below command and where you installed Ansible.
   
-**Create an Inventory file first**
+**STEP1: Create an Inventory file first**
 ```
 Sudo mkdir /etc/ansible
 ```
-**Edit Ansible hosts or inventory file**
+**STEP2: Edit Ansible hosts or inventory file**
 ```
 sudo vi /etc/ansible/hosts
 Add the below two lines in the end of the file:
 [localhost]
 local
 ```
-**Create Ansible Role**
+**STEP3: Create Ansible Role**
 
 ```
 mkdir roles  
@@ -51,7 +51,7 @@ cd roles
 Perform below command to convert this playbook into ansible role.
 ansible-galaxy role init aws-infra-role
 ```
-#### Create sudo vi aws-infra-role/vars/main.yml
+#### STEP4: Create sudo vi aws-infra-role/vars/main.yml
 ```
 keypair: myNov2023Key
 instance_type: t2.small
@@ -63,9 +63,11 @@ security_group: my-jenkins-security-grp1
 ```
 
 all the tasks will go inside tasks folder.
-let's create security group first.
+
+**STEP5:** let's create security group first.
 
 **sudo vi aws-infra-role/tasks/create-sg.yml**
+
 ```
 ---
   - include_vars: "vars/main.yml"
@@ -94,7 +96,7 @@ let's create security group first.
             - proto: all
               cidr_ip: 0.0.0.0/0
 ```
-Let's create a task for creating s3 bucket.
+**STEP6:** Let's create a task for creating s3 bucket.
 
 **sudo vi aws-infra-role/tasks/create-s3.yml**
 
@@ -117,7 +119,7 @@ Let's create a task for creating s3 bucket.
   - name: Display s3 url
     debug: var=s3_url
 ```
-Let's create Ansible main playbook.
+**STEP7:** Let's create Ansible main playbook.
 
 **sudo vi aws-infra-role/main.yml**
 ```
