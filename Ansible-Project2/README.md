@@ -82,6 +82,7 @@ Ip-address ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  a
 ## Write a playbook to install Java11:
 
 #### Create an ansible playbook namely installJava11.yml that has tasks to install java.
+```
 ---
 - hosts: all
   become: true
@@ -97,6 +98,7 @@ Ip-address ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  a
       vars:
         packages:
           - openjdk-11-jdk
+```
 
 
 **Execute** :
