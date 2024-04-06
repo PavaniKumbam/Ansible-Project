@@ -98,7 +98,7 @@ Ip-address ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa  a
 
 **Execute** :
 ```
-Ansible-playbook installJava11.yml
+ansible-playbook installJava11.yml
 ```
 
 - Perform java –version on host node to check java is installed or not.
@@ -154,10 +154,10 @@ ansible-playbook setup-jenkins.yml
 Check status of the Jenkins on the host node.
 
 ```
-sudo systemctl status Jenkins
+sudo systemctl status jenkins
 ```
 
-This should install Jenkins on the target node.
+This should install jenkins on the target node.
 
 Now enter public ip address with port no 8080 of target server by in the browser to see Jenkins up and running.
 
